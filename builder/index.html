@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>店舗HP かんたん作成ツール</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <header class="builder-header">
+    <div>
+      <h1>店舗HP かんたん作成ツール</h1>
+      <div class="subtitle">情報を入力するだけで、お店のホームページが完成します</div>
+    </div>
+    <button id="download-btn" class="download-btn">HTMLをダウンロード</button>
+  </header>
+
+  <div class="builder-main">
+    <!-- 左: 入力フォーム -->
+    <aside class="form-panel">
+
+      <!-- テンプレート選択 -->
+      <div class="section-label">テンプレートを選ぶ</div>
+      <div id="template-selector" class="template-grid"></div>
+
+      <hr class="form-divider">
+
+      <!-- 基本情報 -->
+      <div class="section-label">お店の基本情報</div>
+
+      <div class="form-group">
+        <label for="shop-name">店舗名</label>
+        <input type="text" id="shop-name" placeholder="例: カフェ ひだまり">
+      </div>
+
+      <div class="form-group">
+        <label for="catchphrase">キャッチフレーズ</label>
+        <input type="text" id="catchphrase" placeholder="例: こだわりの一杯で、やすらぎのひとときを">
+      </div>
+
+      <div class="form-group">
+        <label for="shop-description">お店の紹介文</label>
+        <textarea id="shop-description" rows="3" placeholder="お店の特徴やこだわりを書いてください"></textarea>
+      </div>
+
+      <hr class="form-divider">
+
+      <!-- メニュー・料金 -->
+      <div class="section-label">メニュー・料金</div>
+      <div id="menu-items"></div>
+      <button type="button" id="add-menu-btn" class="add-menu-btn">+ メニューを追加</button>
+
+      <hr class="form-divider">
+
+      <!-- 店舗情報 -->
+      <div class="section-label">アクセス・営業情報</div>
+
+      <div class="form-group">
+        <label for="address">住所</label>
+        <input type="text" id="address" placeholder="例: 東京都渋谷区○○1-2-3">
+      </div>
+
+      <div class="form-group">
+        <label for="phone">電話番号</label>
+        <input type="text" id="phone" placeholder="例: 03-1234-5678">
+      </div>
+
+      <div class="form-group">
+        <label for="hours">営業時間</label>
+        <input type="text" id="hours" placeholder="例: 10:00〜20:00">
+      </div>
+
+      <div class="form-group">
+        <label for="closed">定休日</label>
+        <input type="text" id="closed" placeholder="例: 毎週水曜日">
+      </div>
+
+    </aside>
+
+    <!-- 右: プレビュー -->
+    <section class="preview-panel">
+      <div class="preview-toolbar">
+        <span>プレビュー:</span>
+        <button id="preview-mobile-btn" class="preview-size-btn">スマホ</button>
+        <button id="preview-tablet-btn" class="preview-size-btn">タブレット</button>
+        <button id="preview-pc-btn" class="preview-size-btn active">PC</button>
+      </div>
+      <div class="preview-container">
+        <div id="preview-frame" class="preview-frame preview-pc"></div>
+      </div>
+    </section>
+  </div>
+
+  <script src="templates.js"></script>
+  <script src="builder.js"></script>
+</body>
+</html>
