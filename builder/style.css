@@ -119,6 +119,55 @@ body {
 .template-card small { font-size: 0.72em; color: #888; }
 
 /* ==========================================
+   カラーカスタマイズ
+   ========================================== */
+.color-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.color-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.color-item label {
+  font-size: 0.78em;
+  color: #555;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.color-item input[type="color"] {
+  width: 36px;
+  height: 30px;
+  border: 1.5px solid #ddd;
+  border-radius: 6px;
+  padding: 2px;
+  cursor: pointer;
+  background: #fff;
+}
+.color-item input[type="color"]:hover {
+  border-color: #667eea;
+}
+.reset-colors-btn {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #fafafa;
+  color: #888;
+  font-size: 0.78em;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.2s, color 0.2s;
+}
+.reset-colors-btn:hover {
+  background: #f0f0f0;
+  color: #555;
+}
+
+/* ==========================================
    フォーム
    ========================================== */
 .form-group {
@@ -131,7 +180,8 @@ body {
   color: #555;
   margin-bottom: 5px;
 }
-.form-group input,
+.form-group input[type="text"],
+.form-group input[type="url"],
 .form-group textarea {
   width: 100%;
   padding: 10px 12px;
@@ -141,7 +191,8 @@ body {
   font-family: inherit;
   transition: border-color 0.2s;
 }
-.form-group input:focus,
+.form-group input[type="text"]:focus,
+.form-group input[type="url"]:focus,
 .form-group textarea:focus {
   outline: none;
   border-color: #667eea;
@@ -153,6 +204,110 @@ body {
   border: none;
   border-top: 1px solid #eee;
   margin: 20px 0;
+}
+
+/* チェックボックス */
+.checkbox-label {
+  display: flex !important;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  font-size: 0.88em !important;
+}
+.checkbox-label input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #667eea;
+}
+
+/* ==========================================
+   画像アップロード
+   ========================================== */
+.image-upload-area {
+  border: 2px dashed #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: border-color 0.2s;
+  position: relative;
+}
+.image-upload-area:hover {
+  border-color: #667eea;
+}
+.image-upload-placeholder {
+  padding: 20px;
+  text-align: center;
+  color: #999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+.image-upload-icon {
+  font-size: 2em;
+}
+.image-upload-placeholder span {
+  font-size: 0.85em;
+}
+.image-upload-placeholder small {
+  font-size: 0.72em;
+  color: #bbb;
+}
+.image-preview {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  max-height: 180px;
+}
+.image-remove-btn {
+  display: block;
+  width: 100%;
+  padding: 6px;
+  border: none;
+  background: #e57373;
+  color: #fff;
+  font-size: 0.8em;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.2s;
+}
+.image-remove-btn:hover {
+  background: #d32f2f;
+}
+
+/* ==========================================
+   SNSリンク
+   ========================================== */
+.sns-group label {
+  display: flex !important;
+  align-items: center;
+  gap: 6px;
+}
+.sns-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  font-size: 0.65em;
+  font-weight: 700;
+  color: #fff;
+}
+.sns-instagram-icon {
+  background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+.sns-x-icon {
+  background: #000;
+  font-size: 0.7em;
+}
+.sns-line-icon {
+  background: #06C755;
+  font-size: 0.72em;
+}
+.sns-facebook-icon {
+  background: #1877F2;
+  font-size: 0.72em;
 }
 
 /* メニュー項目 */

@@ -29,6 +29,30 @@
 
       <hr class="form-divider">
 
+      <!-- カラーカスタマイズ -->
+      <div class="section-label">カラーをカスタマイズ</div>
+      <div class="color-grid">
+        <div class="color-item">
+          <label for="color-primary">メインカラー</label>
+          <input type="color" id="color-primary" value="#6B4226">
+        </div>
+        <div class="color-item">
+          <label for="color-secondary">サブカラー</label>
+          <input type="color" id="color-secondary" value="#D4A574">
+        </div>
+        <div class="color-item">
+          <label for="color-accent">アクセント</label>
+          <input type="color" id="color-accent" value="#F5E6D3">
+        </div>
+        <div class="color-item">
+          <label for="color-background">背景色</label>
+          <input type="color" id="color-background" value="#FFF8F0">
+        </div>
+      </div>
+      <button type="button" id="reset-colors-btn" class="reset-colors-btn">テンプレートの色に戻す</button>
+
+      <hr class="form-divider">
+
       <!-- 基本情報 -->
       <div class="section-label">お店の基本情報</div>
 
@@ -49,6 +73,39 @@
 
       <hr class="form-divider">
 
+      <!-- 画像アップロード -->
+      <div class="section-label">写真を設定</div>
+
+      <div class="form-group">
+        <label>ヘッダー画像</label>
+        <div class="image-upload-area" id="header-image-area">
+          <input type="file" id="header-image-input" accept="image/*" hidden>
+          <div class="image-upload-placeholder" id="header-image-placeholder">
+            <span class="image-upload-icon">&#128247;</span>
+            <span>クリックして画像を選択</span>
+            <small>推奨: 横長（1200x400px程度）</small>
+          </div>
+          <img id="header-image-preview" class="image-preview" hidden>
+          <button type="button" class="image-remove-btn" id="header-image-remove" hidden>画像を削除</button>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>お店の写真</label>
+        <div class="image-upload-area" id="shop-image-area">
+          <input type="file" id="shop-image-input" accept="image/*" hidden>
+          <div class="image-upload-placeholder" id="shop-image-placeholder">
+            <span class="image-upload-icon">&#128247;</span>
+            <span>クリックして画像を選択</span>
+            <small>推奨: 横長（800x500px程度）</small>
+          </div>
+          <img id="shop-image-preview" class="image-preview" hidden>
+          <button type="button" class="image-remove-btn" id="shop-image-remove" hidden>画像を削除</button>
+        </div>
+      </div>
+
+      <hr class="form-divider">
+
       <!-- メニュー・料金 -->
       <div class="section-label">メニュー・料金</div>
       <div id="menu-items"></div>
@@ -65,6 +122,13 @@
       </div>
 
       <div class="form-group">
+        <label class="checkbox-label">
+          <input type="checkbox" id="show-map" checked>
+          Google Mapsを表示する
+        </label>
+      </div>
+
+      <div class="form-group">
         <label for="phone">電話番号</label>
         <input type="text" id="phone" placeholder="例: 03-1234-5678">
       </div>
@@ -77,6 +141,39 @@
       <div class="form-group">
         <label for="closed">定休日</label>
         <input type="text" id="closed" placeholder="例: 毎週水曜日">
+      </div>
+
+      <hr class="form-divider">
+
+      <!-- SNSリンク -->
+      <div class="section-label">SNSリンク</div>
+
+      <div class="form-group sns-group">
+        <label for="sns-instagram">
+          <span class="sns-icon sns-instagram-icon">&#9679;</span> Instagram
+        </label>
+        <input type="url" id="sns-instagram" placeholder="https://instagram.com/yourshop">
+      </div>
+
+      <div class="form-group sns-group">
+        <label for="sns-x">
+          <span class="sns-icon sns-x-icon">X</span> X (Twitter)
+        </label>
+        <input type="url" id="sns-x" placeholder="https://x.com/yourshop">
+      </div>
+
+      <div class="form-group sns-group">
+        <label for="sns-line">
+          <span class="sns-icon sns-line-icon">L</span> LINE
+        </label>
+        <input type="url" id="sns-line" placeholder="https://line.me/R/ti/p/@yourshop">
+      </div>
+
+      <div class="form-group sns-group">
+        <label for="sns-facebook">
+          <span class="sns-icon sns-facebook-icon">f</span> Facebook
+        </label>
+        <input type="url" id="sns-facebook" placeholder="https://facebook.com/yourshop">
       </div>
 
     </aside>
